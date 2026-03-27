@@ -11,6 +11,7 @@ These are the same skills I use to run marketing for B2B SaaS companies. Each on
 | **Competitive Ads Extractor** | `/competitive-ads` | Scans Meta Ad Library, LinkedIn Ad Library, and Google Ads Transparency Center. Screenshots competitor ads, extracts messaging patterns, surfaces positioning gaps. |
 | **Marketing Strategy Audit** | `/strategy-audit` | 18-exercise marketing strategy builder. ICP prioritization, positioning, revenue levers, big bet campaigns, KPOs, channel strategy, voice guide, tech stack audit, AI readiness assessment. |
 | **Content Repurposer** | `/repurpose` | Takes one piece of content and restructures it for a different format. LinkedIn post to TikTok script. Blog to email. Maintains voice and persona targeting. |
+| **TikTok Analytics** | `/tiktok-analytics @handle` | Scrapes any TikTok profile via Apify, categorizes every video by topic and hook style, surfaces what's working vs not, finds the "winners formula," and generates a local dark-mode dashboard with filters, charts, and sortable data. |
 
 ## Quick Start
 
@@ -39,6 +40,7 @@ Then use any skill as a slash command:
 /competitive-ads full-scan "Competitor1, Competitor2, Competitor3"
 /strategy-audit "Acme acme.com $10M ARR"
 /repurpose "linkedin post" "60-sec tiktok script"
+/tiktok-analytics @yourhandle
 ```
 
 ## How It Works
@@ -57,6 +59,7 @@ The skills are brand-agnostic. Replace `[BRAND]` references by filling in your `
 
 - [Claude Code](https://claude.ai/code) (Anthropic's CLI)
 - For competitive-ads: [Playwright MCP](https://github.com/anthropics/anthropic-tools/tree/main/computer-use/playwright-mcp) (for browser-based ad library scanning)
+- For tiktok-analytics: [Apify](https://apify.com) account (free tier works). Set `APIFY_API_TOKEN` in your `.env` file. Python 3.9+.
 
 ## About GrowthLoops
 
